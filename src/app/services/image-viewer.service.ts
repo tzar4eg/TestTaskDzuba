@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ImageViewerService {
   private _selectedImageIndex: number = 0;
   private _images: string[] = [];
-  
+  public isProcessedImages: boolean = false;
   constructor() { }
   
   setImagesUrl(images: string[]): void {
@@ -46,7 +46,10 @@ export class ImageViewerService {
       return;
     }
     this._selectedImageIndex--;
-
+  }
+  
+  loadImages(images: string[]) {
+    
   }
 
 }
