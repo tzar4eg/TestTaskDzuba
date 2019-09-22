@@ -13,6 +13,10 @@ export class ImageViewerService {
     this._images = images;
   }
 
+  getStatus() : {total: number, selected: number} {
+    return {total: this._images.length, selected: this._selectedImageIndex + 1}
+  }
+
   getImagesUrl(): string[] {
     return this._images;
   }

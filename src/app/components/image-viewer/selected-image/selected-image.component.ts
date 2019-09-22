@@ -8,6 +8,10 @@ import { EventEmitter } from "@angular/core";
 })
 export class SelectedImageComponent implements OnInit {
   @Input() image: string;
+  @Input() status: {
+    total: number,
+    selected: number;
+  }
   @Output() forward: EventEmitter<any> = new EventEmitter();
   @Output() backward: EventEmitter<any> = new EventEmitter();
   constructor() {}

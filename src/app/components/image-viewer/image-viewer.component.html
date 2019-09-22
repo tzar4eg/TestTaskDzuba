@@ -1,4 +1,5 @@
 <app-selected-image [image]="imgService.getSelectedUrl()"
+[status]="imgService.getStatus()"
 (forward)="getNextImage()"
 (backward)="getPreviousImage()"
 ></app-selected-image>

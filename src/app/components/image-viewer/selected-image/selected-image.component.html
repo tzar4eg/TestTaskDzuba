@@ -1,5 +1,5 @@
 <div class="selected-image">
-  <div class="info">1 из 7</div>
+  <div class="info">{{ status.selected }} из {{ status.total }}</div>
   <a class="btn-nav btn-backward" (click)="onBackward()"></a>
   <a class="btn-nav btn-forward" (click)="onForward()"></a>
   <img [src]="image" alt="" />
