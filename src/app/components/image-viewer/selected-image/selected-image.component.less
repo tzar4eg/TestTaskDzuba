@@ -22,8 +22,14 @@
     .ui-buttons();
     transform: translateY(-50%);
     border-radius: 50%;  
-    width: 30px;    
-    
+    width: 30px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in;
+
+    &:hover{
+      transition: background-color 200ms ease-in;
+      background-color: #999999;
+    } 
 
     &.btn-forward {
       right: 10px;
