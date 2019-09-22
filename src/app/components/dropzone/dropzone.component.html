@@ -1,26 +1,37 @@
-
-<img src="" alt="">
+<img src="" alt="" />
 <div class="dropzone" appDropzone (fileDropped)="onFileChange($event)">
   <input
     class="dropzone-hidden-input"
     type="file"
+    multiple
     (change)="onFileChange($event.target.files)"
     #file
   />
+  <ng-container *ngIf="filesToUpload; then upload; else select"></ng-container>
+  <ng-template #upload>
+    <div
+      class="dropzone-text dropzone-warning"
+      *ngIf="errorMessage"
+      [class.warningMessage]="warningMessage"
+      [innerHTML]="errorMessage"
+    ></div>
+    <div>
+      <app-dropzone-progress-bar [uploadingStream]="stream"  *ngFor="let stream of filesToUpload"></app-dropzone-progress-bar>
+    </div>
+  </ng-template>
+  <ng-template #select>
+      <div class="dropzone-text">Перетащите файлы в эту область</div>
+      <div class="dropzone-text">или</div>
+      <div class="dropzone-text dropzone-link" (click)="file.click()">
+        Выберите на компьютере
+      </div>
+      <div
+      class="dropzone-text dropzone-warning"
+      *ngIf="errorMessage"
+      [class.warningMessage]="warningMessage"
+      [innerHTML]="errorMessage"
+    ></div>
+  </ng-template>
 
-  <div class="dropzone-text">Перетащите файлы в эту область</div>
-  <div class="dropzone-text">или</div>
-  <div class="dropzone-text dropzone-link" (click)="file.click()">
-    Выберите на компьютере
-  </div>
-  <div
-    class="dropzone-text dropzone-warning"
-    *ngIf="errorMessage"
-    [class.warningMessage]="warningMessage"
-    [innerHTML]="errorMessage"
-  ></div>
-
-  <div>
-    <app-dropzone-progress-bar></app-dropzone-progress-bar>
-  </div>
+  
 </div>
