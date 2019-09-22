@@ -4,10 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ImageViwerService {
-  selectedImage = {
-
-  }
+  selectedImage = []
   images = [];
   
   constructor() { }
+  
 }
