@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-dropzone",
@@ -11,7 +11,10 @@ export class DropzoneComponent implements OnInit {
   public errorMessage = "";
   public warningMessage = false;
   public images: File[];
-  public filesToUpload: {stream: Observable<any>, fileName: string}[];
+  public filesToUpload: { stream: Observable<any>; fileName: string }[];
+  public imgLinks: string[] = [];
+
+  @Output() uploadedImages: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   constructor(private _http: HttpClient) {}
   ngOnInit() {}
@@ -33,9 +36,9 @@ export class DropzoneComponent implements OnInit {
     this.errorMessage = "";
   }
   uploadFiles(images: File[]) {
-    return Array.prototype.map.call(images, ((image: File) => {
-      return {stream: this.uploadFile(image), fileName: image.name};
-    }))
+    return Array.prototype.map.call(images, (image: File) => {
+      return { stream: this.uploadFile(image), fileName: image.name };
+    });
   }
 
   uploadFile(file: File): Observable<any> {
@@ -47,6 +50,10 @@ export class DropzoneComponent implements OnInit {
       observe: "events"
     });
   }
-  onUploadFile() {    
+  onUploadFile(img: string) {
+    this.imgLinks.push(img);
+    if (this.imgLinks.length === this.images.length) {
+      this.uploadedImages.emit(this.imgLinks);
+    }
   }
 }

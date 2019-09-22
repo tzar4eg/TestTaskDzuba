@@ -13,7 +13,7 @@ import { IUploadedImage } from 'src/app/models/uploadedImg.model';
 export class DropzoneProgressBarComponent implements OnInit {
   @Input() uploadingStream: { stream: Observable<any>; fileName: string };
   @Input() progress: number = 0;
-  @Output() upload: EventEmitter<IUploadedImage> = new EventEmitter<IUploadedImage>();  
+  @Output() upload: EventEmitter<string> = new EventEmitter<string>();  
   constructor() {}
   
   ngOnInit() {
@@ -23,7 +23,7 @@ export class DropzoneProgressBarComponent implements OnInit {
         this.progress = Math.round((event.loaded / event.total * 100) )  ;
       }
       else if(event.type === HttpEventType.Response) {
-        this.upload.emit(event.data);
+        this.upload.emit(event.data.name);
       }
     });
   }

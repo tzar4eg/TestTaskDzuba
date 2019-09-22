@@ -16,22 +16,24 @@
       [innerHTML]="errorMessage"
     ></div>
     <div>
-      <app-dropzone-progress-bar [uploadingStream]="stream"  *ngFor="let stream of filesToUpload"></app-dropzone-progress-bar>
+      <app-dropzone-progress-bar
+        (upload)="onUpload($event)"
+        [uploadingStream]="stream"
+        *ngFor="let stream of filesToUpload"
+      ></app-dropzone-progress-bar>
     </div>
   </ng-template>
   <ng-template #select>
-      <div class="dropzone-text">Перетащите файлы в эту область</div>
-      <div class="dropzone-text">или</div>
-      <div class="dropzone-text dropzone-link" (click)="file.click()">
-        Выберите на компьютере
-      </div>
-      <div
+    <div class="dropzone-text">Перетащите файлы в эту область</div>
+    <div class="dropzone-text">или</div>
+    <div class="dropzone-text dropzone-link" (click)="file.click()">
+      Выберите на компьютере
+    </div>
+    <div
       class="dropzone-text dropzone-warning"
       *ngIf="errorMessage"
       [class.warningMessage]="warningMessage"
       [innerHTML]="errorMessage"
     ></div>
   </ng-template>
-
-  
 </div>
