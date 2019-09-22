@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-image-list',
@@ -7,10 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ImageListComponent implements OnInit {
   @Input() images: string[];
+  @Output() getIndex: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSelectImg(index) {
+    this.getIndex.emit(index)
+  }
 }

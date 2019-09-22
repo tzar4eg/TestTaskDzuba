@@ -2,4 +2,4 @@
 (forward)="getNextImage()"
 (backward)="getPreviousImage()"
 ></app-selected-image>
-<app-image-list [images]="fakeImages"></app-image-list>
+<app-image-list [images]="imgService.getImagesUrl()"></app-image-list>
