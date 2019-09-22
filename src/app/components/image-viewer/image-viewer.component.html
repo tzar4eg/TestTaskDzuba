@@ -1,8 +1,11 @@
-<app-selected-image [image]="imgService.getSelectedUrl()"
-[status]="imgService.getStatus()"
-(forward)="getNextImage()"
-(backward)="getPreviousImage()"
+<app-selected-image
+  [image]="imgService.getSelectedUrl()"
+  [status]="imgService.getStatus()"
+  (forward)="getNextImage()"
+  (backward)="getPreviousImage()"
 ></app-selected-image>
-<app-image-list 
-[images]="imgService.getImagesUrl()"
-(getIndex)="onImageSelect($event)"></app-image-list>
+<app-image-list
+  [images]="imgService.getImagesUrl()"
+  [status]="imgService.getStatus()"
+  (getIndex)="onImageSelect($event)"
+></app-image-list>

@@ -1,3 +1,3 @@
 <div class="image-miniatures">
-    <img [src]="img" alt="" (click)="onSelectImg(i)"  *ngFor="let img of images; let i = index;">
+    <img [class.selected]="i === status.selected - 1" [src]="img" alt="" (click)="onSelectImg(i)"  *ngFor="let img of images; let i = index;">
 </div>

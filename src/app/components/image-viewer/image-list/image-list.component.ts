@@ -7,6 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 })
 export class ImageListComponent implements OnInit {
   @Input() images: string[];
+  @Input()  status: {
+    total: number,
+    selected: number;
+  }
   @Output() getIndex: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}

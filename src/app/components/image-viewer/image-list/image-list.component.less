@@ -1,23 +1,23 @@
 .image-miniatures {
-    img {
-        height: 100%;
-        border: 1px;
-        transform: scale(1);
-        transition: 50ms transform linear;
-       &:not(:first-child) {
-           margin-left: 10px;
-       }
-        &:hover {
-            transform: scale(1.1);           
-
-        }
+  img {
+    height: 100%;
+    border: 1px;
+    transform: scale(1);
+    transition: 50ms transform linear;
+    &:not(:first-child) {
+      margin-left: 10px;
     }
-    height: 100px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    
-    
+    &.selected {
+      border: 1px solid blue;  
+      transform: scale(1.07);
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
