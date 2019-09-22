@@ -1,4 +1,4 @@
-<div class="dropzone" appDropzone>
+<div class="dropzone" appDropzone (fileDropped)="onFileChange($event)">
   
   
   <input
@@ -7,9 +7,12 @@
     (change)="onFileChange($event.target.files)"
     #file
   />
+
   <div class="dropzone-text">Перетащите файлы в эту область</div>
   <div class="dropzone-text">или</div>
   <div class="dropzone-text dropzone-link" (click)="file.click()">
     Выберите на компьютере
   </div>
+
+  <pre>{{testImagesArray | json}}</pre>
 </div>
