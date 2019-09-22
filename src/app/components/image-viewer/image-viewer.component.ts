@@ -10,7 +10,7 @@ import { ImageViewerService } from 'src/app/services/image-viewer.service';
 export class ImageViewerComponent implements OnInit {
   fakeImages = fakeImages; 
   selectedImg: string = ''
-  constructor(private imgService: ImageViewerService) {}
+  constructor(public imgService: ImageViewerService) {}
 
   ngOnInit() {
     this.imgService.setImagesUrl(fakeImages);    

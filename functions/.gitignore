@@ -1,8 +1,10 @@
 ## Compiled JavaScript files
 **/*.js
 **/*.js.map
-
 # Typescript v1 declaration files
 typings/
 
 node_modules/
+
+#Other files
+testtaskdzyuba-firebase-adminsdk-z306v-ea5dfdd08d.ts

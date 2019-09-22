@@ -34,7 +34,7 @@ export class DropzoneComponent implements OnInit {
         'Access-Control-Allow-Origin': 'https//localhost:4200',
       })
     }
-    let url = "http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload";
+    let url = "https://us-central1-testtaskdzyuba.cloudfunctions.net/onImageUpload";
     this._http.post(url, {test: 'test'}).subscribe(el => console.log(el))
   }
 }
