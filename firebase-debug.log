@@ -1,98 +1,49 @@
-[debug] [2019-09-22T12:21:02.796Z] ----------------------------------------------------------------------
-[debug] [2019-09-22T12:21:02.798Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tzar4\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2019-09-22T12:21:02.798Z] CLI Version:   7.3.2
-[debug] [2019-09-22T12:21:02.798Z] Platform:      win32
-[debug] [2019-09-22T12:21:02.798Z] Node Version:  v10.16.0
-[debug] [2019-09-22T12:21:02.799Z] Time:          Sun Sep 22 2019 15:21:02 GMT+0300 (GMT+03:00)
-[debug] [2019-09-22T12:21:02.799Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T14:26:00.064Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T14:26:00.067Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tzar4\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T14:26:00.068Z] CLI Version:   7.3.2
+[debug] [2019-09-22T14:26:00.068Z] Platform:      win32
+[debug] [2019-09-22T14:26:00.068Z] Node Version:  v10.16.0
+[debug] [2019-09-22T14:26:00.069Z] Time:          Sun Sep 22 2019 17:26:00 GMT+0300 (GMT+03:00)
+[debug] [2019-09-22T14:26:00.069Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-09-22T12:21:02.808Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-09-22T12:21:02.809Z] > authorizing via signed-in user
-[debug] [2019-09-22T12:21:02.809Z] [iam] checking project testtaskdzyuba for permissions ["firebase.projects.get"]
-[debug] [2019-09-22T12:21:02.811Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testtaskdzyuba:testIamPermissions  
+[debug] [2019-09-22T14:26:00.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T14:26:00.078Z] > authorizing via signed-in user
+[debug] [2019-09-22T14:26:00.078Z] [iam] checking project testtaskdzyuba for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T14:26:00.080Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testtaskdzyuba:testIamPermissions  
 
-[debug] [2019-09-22T12:21:03.820Z] <<< HTTP RESPONSE 200
-[debug] [2019-09-22T12:21:03.822Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba  
+[debug] [2019-09-22T14:26:01.111Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T14:26:01.113Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba  
  
-[debug] [2019-09-22T12:21:04.081Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T14:26:01.368Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'E:\Projects\TestTaskDzuba'...
 [info] 
-[debug] [2019-09-22T12:21:04.086Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba/webApps/-/config  
+[debug] [2019-09-22T14:26:01.374Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba/webApps/-/config  
  
 [warn] !  Your requested "node" version "8" doesn't match your global version "10"
 [info] +  functions: Emulator started at http://localhost:5001
-[debug] [2019-09-22T12:21:04.542Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T14:26:01.831Z] <<< HTTP RESPONSE 200
 [info] i  functions: Watching "E:\Projects\TestTaskDzuba\functions" for Cloud Functions...
 [info] i  hosting: Serving hosting files from: dist
 [info] +  hosting: Local server: http://localhost:5000
-[debug] [2019-09-22T12:21:05.053Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
-[debug] [2019-09-22T12:21:05.053Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2019-09-22T12:21:05.056Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
-[debug] [2019-09-22T12:21:05.057Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:21:05.058Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-22T14:26:02.307Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
+[debug] [2019-09-22T14:26:02.307Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T14:26:02.310Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-22T14:26:02.311Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-22T14:26:02.312Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
 [info] +  functions[onImageUpload]: http function initialized (http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload).
-[debug] [2019-09-22T12:21:15.871Z] Accepted request POST /testtaskdzyuba/us-central1/onImageUpload --> onImageUpload
-[debug] [2019-09-22T12:21:16.368Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
+[debug] [2019-09-22T14:26:08.816Z] Accepted request OPTIONS /testtaskdzyuba/us-central1/onImageUpload --> onImageUpload
+[debug] [2019-09-22T14:26:09.255Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
 [info] i  functions: Beginning execution of "onImageUpload"
-[debug] [2019-09-22T12:21:16.369Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2019-09-22T12:21:16.372Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
-[debug] [2019-09-22T12:21:16.374Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:21:16.375Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:21:16.448Z] [runtime-status] Trigger "onImageUpload" has been found, beginning invocation! {}
-[debug] [2019-09-22T12:21:16.448Z] [runtime-status]  {"httpsTrigger":{},"name":"onImageUpload","entryPoint":"onImageUpload"}
-[debug] [2019-09-22T12:21:16.448Z] [runtime-status] Running onImageUpload in mode HTTPS {}
-[debug] [2019-09-22T12:21:16.456Z] {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\13980"}
-[debug] [2019-09-22T12:21:16.462Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\13980"}
-[debug] [2019-09-22T12:21:16.476Z] [runtime-status] Ephemeral server used! {}
-[debug] [2019-09-22T12:21:16.483Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "onImageUpload" in ~1s
-[debug] [2019-09-22T12:22:28.966Z] ----------------------------------------------------------------------
-[debug] [2019-09-22T12:22:28.968Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tzar4\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2019-09-22T12:22:28.968Z] CLI Version:   7.3.2
-[debug] [2019-09-22T12:22:28.969Z] Platform:      win32
-[debug] [2019-09-22T12:22:28.969Z] Node Version:  v10.16.0
-[debug] [2019-09-22T12:22:28.970Z] Time:          Sun Sep 22 2019 15:22:28 GMT+0300 (GMT+03:00)
-[debug] [2019-09-22T12:22:28.970Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2019-09-22T12:22:28.978Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-09-22T12:22:28.979Z] > authorizing via signed-in user
-[debug] [2019-09-22T12:22:28.979Z] [iam] checking project testtaskdzyuba for permissions ["firebase.projects.get"]
-[debug] [2019-09-22T12:22:28.981Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testtaskdzyuba:testIamPermissions  
-
-[debug] [2019-09-22T12:22:30.003Z] <<< HTTP RESPONSE 200
-[debug] [2019-09-22T12:22:30.005Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba  
- 
-[debug] [2019-09-22T12:22:30.251Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'E:\Projects\TestTaskDzuba'...
-[info] 
-[debug] [2019-09-22T12:22:30.256Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testtaskdzyuba/webApps/-/config  
- 
-[warn] !  Your requested "node" version "8" doesn't match your global version "10"
-[info] +  functions: Emulator started at http://localhost:5001
-[debug] [2019-09-22T12:22:30.724Z] <<< HTTP RESPONSE 200
-[info] i  functions: Watching "E:\Projects\TestTaskDzuba\functions" for Cloud Functions...
-[info] i  hosting: Serving hosting files from: dist
-[info] +  hosting: Local server: http://localhost:5000
-[debug] [2019-09-22T12:22:31.215Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
-[debug] [2019-09-22T12:22:31.215Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2019-09-22T12:22:31.217Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
-[debug] [2019-09-22T12:22:31.219Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:22:31.219Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[info] +  functions[onImageUpload]: http function initialized (http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload).
-[debug] [2019-09-22T12:22:54.648Z] Accepted request POST /testtaskdzyuba/us-central1/onImageUpload --> onImageUpload
-[debug] [2019-09-22T12:22:55.139Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Projects\\TestTaskDzuba\\functions","node_version":"10.16.0"}
-[info] i  functions: Beginning execution of "onImageUpload"
-[debug] [2019-09-22T12:22:55.140Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2019-09-22T12:22:55.142Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
-[debug] [2019-09-22T12:22:55.144Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:22:55.144Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
-[debug] [2019-09-22T12:22:55.217Z] [runtime-status] Trigger "onImageUpload" has been found, beginning invocation! {}
-[debug] [2019-09-22T12:22:55.217Z] [runtime-status]  {"httpsTrigger":{},"name":"onImageUpload","entryPoint":"onImageUpload"}
-[debug] [2019-09-22T12:22:55.217Z] [runtime-status] Running onImageUpload in mode HTTPS {}
-[debug] [2019-09-22T12:22:55.225Z] {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\12436"}
-[debug] [2019-09-22T12:22:55.228Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\12436"}
-[debug] [2019-09-22T12:22:55.244Z] [runtime-status] Ephemeral server used! {}
-[debug] [2019-09-22T12:22:55.250Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-09-22T14:26:09.257Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T14:26:09.259Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-22T14:26:09.260Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-22T14:26:09.261Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Projects\\TestTaskDzuba\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-22T14:26:09.580Z] [runtime-status] Trigger "onImageUpload" has been found, beginning invocation! {}
+[debug] [2019-09-22T14:26:09.580Z] [runtime-status]  {"httpsTrigger":{},"name":"onImageUpload","entryPoint":"onImageUpload"}
+[debug] [2019-09-22T14:26:09.580Z] [runtime-status] Running onImageUpload in mode HTTPS {}
+[debug] [2019-09-22T14:26:09.588Z] {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\13384"}
+[debug] [2019-09-22T14:26:09.590Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Projects\\TestTaskDzuba\\functions\\13384"}
+[debug] [2019-09-22T14:26:09.597Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-22T14:26:09.601Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "onImageUpload" in ~1s

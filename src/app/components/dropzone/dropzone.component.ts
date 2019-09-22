@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: "app-dropzone",
@@ -29,8 +29,12 @@ export class DropzoneComponent implements OnInit {
   }
 
   upploadFiles(files: File[]) {
-    let formData: FormData = new FormData();
-    formData.append('uploadFiles', files[0], files[0].name)
-    this._http.post('http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload', formData).subscribe(el => console.log(el))
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': 'https//localhost:4200',
+      })
+    }
+    let url = "http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload";
+    this._http.post(url, {test: 'test'}).subscribe(el => console.log(el))
   }
 }
