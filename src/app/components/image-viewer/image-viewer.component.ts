@@ -9,6 +9,7 @@ import { fakeImages } from './fake-images';
 })
 export class ImageViewerComponent implements OnInit {
   fakeImages = fakeImages;
+  selectedImage = '123'
   constructor() { }
 
   ngOnInit() {
