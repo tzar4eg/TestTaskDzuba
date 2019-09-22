@@ -47,4 +47,6 @@ export class DropzoneComponent implements OnInit {
       observe: "events"
     });
   }
+  onUploadFile() {    
+  }
 }

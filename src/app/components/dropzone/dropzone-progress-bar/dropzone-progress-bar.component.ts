@@ -1,24 +1,30 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpEventType } from '@angular/common/http';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from "@angular/core";
+import { Observable } from "rxjs";
+import { HttpEventType } from "@angular/common/http";
+import { IUploadedImage } from 'src/app/models/uploadedImg.model';
 
 @Component({
-  selector: 'app-dropzone-progress-bar',
-  templateUrl: './dropzone-progress-bar.component.html',
-  styleUrls: ['./dropzone-progress-bar.component.less']
+  selector: "app-dropzone-progress-bar",
+  templateUrl: "./dropzone-progress-bar.component.html",
+  styleUrls: ["./dropzone-progress-bar.component.less"]
 })
+
+
 export class DropzoneProgressBarComponent implements OnInit {
-  @Input() uploadingStream: {stream: Observable<any>, fileName: string};
+  @Input() uploadingStream: { stream: Observable<any>; fileName: string };
   @Input() progress: number = 0;
-  constructor() { }
-
+  @Output() upload: EventEmitter<IUploadedImage> = new EventEmitter<IUploadedImage>();  
+  constructor() {}
+  
   ngOnInit() {
-    this.uploadingStream.stream.subscribe(event => {
-      if(event.type === HttpEventType.UploadProgress)  {
-        this.progress = Math.round(event.loaded / event.total)
-            }
-
-    })
+    this.uploadingStream.stream.subscribe(event => {     
+      if (event.type === HttpEventType.UploadProgress) {
+        
+        this.progress = Math.round((event.loaded / event.total * 100) )  ;
+      }
+      else if(event.type === HttpEventType.Response) {
+        this.upload.emit(event.data);
+      }
+    });
   }
-
 }

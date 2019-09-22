@@ -1,4 +1,4 @@
 <div class="progress-bar">
     <div class="progress-bar-text">Файл {{uploadingStream.fileName}} загружен на {{progress}}%</div>
-    <div class="progress-bar-filler" [style.width.%]="progress"></div>
+    <div class="progress-bar-filler" [style.width.%]="progress" [class.done]="progress >= 100"></div>
 </div>
