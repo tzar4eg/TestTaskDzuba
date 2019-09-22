@@ -11,6 +11,7 @@
   .info {
     .ui-buttons();
     padding: 0 10px;
+    font-size: 12px;
     border-radius: 20px;
     transform: translateX(-50%);
     left: 50%;
@@ -27,30 +28,31 @@
     &.btn-forward {
       right: 10px;
       top: 50%;
-      .arrow(45deg);
+      .arrow(45deg, -5px);
+      
     }
     &.btn-backward {
       left: 10px;
       top: 50%;
-      .arrow(-135deg);
+      .arrow(-135deg, 5px);
     }
   }
 }
 
 // MIXINS //
 
-.arrow(@deg) {
+.arrow(@deg, @transition: 0px) {
   &:before {
     content: "";
     display: block;
     position: absolute;
     transform: translate(-50%, -50%) rotate(@deg);
     top: 50%;
-    left: 50%;
+    left: 50% + @transition;
     width: 8px;
     height: 8px;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
   }
 }
 
