@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropzone.component.less']
 })
 export class DropzoneComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
   }
-
+  onFileChange(event: FileList): void {
+   
+  }
 }
