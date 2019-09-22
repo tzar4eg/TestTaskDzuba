@@ -1,6 +1,4 @@
 <div class="dropzone" appDropzone (fileDropped)="onFileChange($event)">
-  
-  
   <input
     class="dropzone-hidden-input"
     type="file"
@@ -13,4 +11,10 @@
   <div class="dropzone-text dropzone-link" (click)="file.click()">
     Выберите на компьютере
   </div>
+  <div
+    class="dropzone-text dropzone-warning"
+    *ngIf="errorMessage"
+    [class.warningMessage]="warningMessage"
+    [innerHTML]="errorMessage"
+  ></div>
 </div>
