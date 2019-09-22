@@ -31,16 +31,16 @@ app.post("/upload", async (req, res) => {
         });
       } else {
         let image = req.files.image;
-  
+        let token = Math.floor(Math.random()+10000) + "-";
         //Use the mv() method to place the image in upload directory (i.e. "uploads")
-        image.mv("./uploads/" + image.name);
+        image.mv("./uploads/" + token + image.name);
   
         //send response
         res.send({
           status: true,
           message: "File is uploaded",
           data: {
-            name: image.name,
+            name: token + image.name,
             mimetype: image.mimetype,
             size: image.size
           }
