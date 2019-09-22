@@ -10,16 +10,19 @@
 
   border-radius: 5px;
   background-color: #f7f7f7;
-  
-  @color: "rgb(229, 229, 229)";
-  .stroked-border(@color);
 
+  @color: "rgb(153, 153, 153)";
+  .stroked-border(@color);
+  &.__hovered-with-file {
+    background-color: #aeffff;
+  }
   &-text {
-    font-size: 11px;
-    color: gray;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 5px;
   }
   &-link {
-    color: skyblue;
+    color: #19a0fb;
   }
   &-hidden-input {
     display: none;
