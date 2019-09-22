@@ -13,4 +13,10 @@ exports.onImageUpload = functions.https.onRequest((req, res) => {
       message: "Not allowed"
     });
   }
+  console.log(req);
+  return res.status(200).json({
+    message: "Not allowed"
+  });
 });
+
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: "app-dropzone",
@@ -9,7 +9,7 @@ import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
 export class DropzoneComponent implements OnInit {
   public errorMessage = "";
   public warningMessage = false;
-  constructor() {}
+  constructor(private _http: HttpClient) {}
   ngOnInit() {}
   onFileChange(event: FileList): void {
     const images: File[] = Array.prototype.filter.call(event, (file: File) => {
@@ -24,6 +24,13 @@ export class DropzoneComponent implements OnInit {
       this.errorMessage = `<div>Файлов: ${event.length}, Изображений: ${images.length}.</div><div>Будут загружены только изображения!</div>`;
       return;
     }
+    this.upploadFiles(images)
     this.errorMessage = "";
+  }
+
+  upploadFiles(files: File[]) {
+    let formData: FormData = new FormData();
+    formData.append('uploadFiles', files[0], files[0].name)
+    this._http.post('http://localhost:5001/testtaskdzyuba/us-central1/onImageUpload', formData).subscribe(el => console.log(el))
   }
 }

@@ -7,6 +7,7 @@ import { DropzoneDirective } from './directives/dropzone.directive';
 import { ImageViewerComponent } from './components/image-viewer/image-viewer.component';
 import { SelectedImageComponent } from './components/image-viewer/selected-image/selected-image.component';
 import { ImageListComponent } from './components/image-viewer/image-list/image-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ImageListComponent } from './components/image-viewer/image-list/image-l
     ImageListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
