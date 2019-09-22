@@ -31,7 +31,7 @@ export class DropzoneComponent implements OnInit {
   upploadFiles(files: File[]) {
     let formData = new FormData();
     formData.append('image', files[0], files[0].name)
-    let url = "https://us-central1-testtaskdzyuba.cloudfunctions.net/onImageUpload";    
+    let url = "http://localhost:4100/upload";    
     this._http.post(url, formData).subscribe((resp: {fileName: string}) => console.log(resp.fileName))
   }
 }
