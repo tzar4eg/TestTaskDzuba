@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpEventType } from "@angular/common/http";
-import { IUploadedImage } from 'src/app/models/uploadedImg.model';
 
 @Component({
   selector: "app-dropzone-progress-bar",
@@ -23,7 +22,8 @@ export class DropzoneProgressBarComponent implements OnInit {
         this.progress = Math.round((event.loaded / event.total * 100) )  ;
       }
       else if(event.type === HttpEventType.Response) {
-        this.upload.emit(event.data.name);
+        
+       this.upload.emit(event.body.data.name);
       }
     });
   }

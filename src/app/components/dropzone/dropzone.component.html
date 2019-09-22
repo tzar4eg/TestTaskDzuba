@@ -17,7 +17,7 @@
     ></div>
     <div>
       <app-dropzone-progress-bar
-        (upload)="onUpload($event)"
+        (upload)="onUploadFile($event)"
         [uploadingStream]="stream"
         *ngFor="let stream of filesToUpload"
       ></app-dropzone-progress-bar>
