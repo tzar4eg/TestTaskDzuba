@@ -20,7 +20,10 @@ export class ImageViewerService {
   getSelectedIndex(): number {
     return this._selectedImageIndex;
   } 
-
+  
+  selectImage(index: number): void{
+    this._selectedImageIndex = index;
+  }
   getSelectedUrl(): string {
     return this._images[this._selectedImageIndex]
   }

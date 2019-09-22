@@ -17,8 +17,8 @@ export class ImageViewerComponent implements OnInit {
     this.selectedImg = this.imgService.getSelectedUrl();
   }
 
-  selectImage(): void {
-
+  onImageSelect(event): void {
+    this.imgService.selectImage(event);
   }
 
   getPreviousImage(): void {
