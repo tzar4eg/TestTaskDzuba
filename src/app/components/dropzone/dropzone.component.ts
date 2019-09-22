@@ -24,14 +24,18 @@ export class DropzoneComponent implements OnInit {
       this.errorMessage = `<div>Файлов: ${event.length}, Изображений: ${images.length}.</div><div>Будут загружены только изображения!</div>`;
       return;
     }
+    
     this.upploadFiles(images)
     this.errorMessage = "";
   }
 
+  
+
   upploadFiles(files: File[]) {
     let formData = new FormData();
+    let url = "http://localhost:4100/upload"; 
     formData.append('image', files[0], files[0].name)
-    let url = "http://localhost:4100/upload";    
+     
     this._http.post(url, formData).subscribe((resp: {fileName: string}) => console.log(resp.fileName))
   }
 }

@@ -9,6 +9,7 @@ import { SelectedImageComponent } from './components/image-viewer/selected-image
 import { ImageListComponent } from './components/image-viewer/image-list/image-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageViewerService } from './services/image-viewer.service';
+import { DropzoneProgressBarComponent } from './components/dropzone/dropzone-progress-bar/dropzone-progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ImageViewerService } from './services/image-viewer.service';
     DropzoneDirective,
     ImageViewerComponent,
     SelectedImageComponent,
-    ImageListComponent
+    ImageListComponent,
+    DropzoneProgressBarComponent
   ],
   imports: [
     BrowserModule,
