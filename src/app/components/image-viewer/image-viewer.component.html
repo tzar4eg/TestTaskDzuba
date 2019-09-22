@@ -1,4 +1,4 @@
-<app-selected-image [image]="selectedImage"
+<app-selected-image [image]="imgService.getSelectedUrl()"
 (forward)="getNextImage()"
 (backward)="getPreviousImage()"
 ></app-selected-image>

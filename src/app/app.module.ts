@@ -8,6 +8,7 @@ import { ImageViewerComponent } from './components/image-viewer/image-viewer.com
 import { SelectedImageComponent } from './components/image-viewer/selected-image/selected-image.component';
 import { ImageListComponent } from './components/image-viewer/image-list/image-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageViewerService } from './services/image-viewer.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ImageViewerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

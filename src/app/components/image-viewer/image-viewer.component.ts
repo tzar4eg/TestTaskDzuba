@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { fakeImages } from "./fake-images";
+import { ImageViewerService } from 'src/app/services/image-viewer.service';
 
 @Component({
   selector: "app-image-viewer",
@@ -7,22 +8,25 @@ import { fakeImages } from "./fake-images";
   styleUrls: ["./image-viewer.component.less"]
 })
 export class ImageViewerComponent implements OnInit {
-  fakeImages = fakeImages;
-  selectedImage = "123";
-  constructor() {}
+  fakeImages = fakeImages; 
+  selectedImg: string = ''
+  constructor(private imgService: ImageViewerService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.imgService.setImagesUrl(fakeImages);    
+    this.selectedImg = this.imgService.getSelectedUrl();
+  }
 
   selectImage(): void {
 
   }
 
   getPreviousImage(): void {
-    console.log("Previous image");
+    this.imgService.previousImage();
   }
 
   getNextImage(): void {
-    console.log("Next image");
+    this.imgService.nextImage();
   }
 
   @HostListener("document:keyup", ["$event"])
