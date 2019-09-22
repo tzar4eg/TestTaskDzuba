@@ -1,6 +1,6 @@
 <div class="dropzone">
-  <input class="dropzone-hidden-input" type="file" />
+  <input class="dropzone-hidden-input" type="file" #file/>
   <div class="dropzone-text">Перетащите файлы в эту область</div>
   <div class="dropzone-text">или</div>
-  <div class="dropzone-text dropzone-link"><a>Выберите на компьютере</a></div>
+  <div class="dropzone-text dropzone-link" (click)='file.click()'><a>Выберите на компьютере</a></div>
 </div>
