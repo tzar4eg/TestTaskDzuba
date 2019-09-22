@@ -5,7 +5,7 @@
   (backward)="getPreviousImage()"
 ></app-selected-image>
 <app-image-list
-  [images]="imgService.getImagesUrl()"
+  [images]="imgService.getImages()"
   [status]="imgService.getStatus()"
   (getIndex)="onImageSelect($event)"
 ></app-image-list>

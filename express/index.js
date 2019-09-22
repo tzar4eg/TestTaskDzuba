@@ -27,7 +27,6 @@ app.get("/uploads/:img", (req, res) => {
   fs.readFile("./uploads/" + img, (err, content) => {
     if (err) {
       res.writeHead(400, { "Content-type": "text/html" });
-      console.log(err);
       res.end("No such image");
     } else {
       res.writeHead(200, { "Content-type": "image/jpg" });

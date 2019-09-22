@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Component({
@@ -13,19 +13,14 @@ export class DropzoneComponent implements OnInit {
   public images: File[];
   public filesToUpload: { stream: Observable<any>; fileName: string }[];
   public imgLinks: string[] = [];
- 
-  @Output() uploadedImages: EventEmitter<string[]> = new EventEmitter<string[]>();
+
+  @Output() uploadedImages: EventEmitter<string[]> = new EventEmitter<
+    string[]
+  >();
 
   constructor(private _http: HttpClient) {}
   ngOnInit() {
-    this._http.get('http://localhost:4100/uploads/467-image_2019-08-31_22-04-07.png', {responseType: 'blob'}).subscribe(img => {
-      let reader = new FileReader();
-      reader.addEventListener("load", () => {
-        this.image = reader.result;
-      }, false )
-      reader.readAsDataURL(img);
    
-  })
   }
   onFileChange(event: FileList): void {
     this.images = Array.prototype.filter.call(event, (file: File) => {

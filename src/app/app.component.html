@@ -1,5 +1,5 @@
 
 <div class="content-wrapper">
   <app-dropzone (uploadedImages)="onUpload($event)" *ngIf="!uploadedImages.length"></app-dropzone>
-  <app-image-viewer *ngIf="uploadedImages.length"></app-image-viewer>
+  <app-image-viewer *ngIf="imgService.isProcessedImages"></app-image-viewer>
 </div>

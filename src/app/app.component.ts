@@ -12,5 +12,6 @@ export class AppComponent {
   constructor(public imgService: ImageViewerService){}
   onUpload(images: string[]) {
     this.uploadedImages = images;
+    this.imgService.loadImages(images);
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from "@angular/core";
-import { fakeImages } from "./fake-images";
 import { ImageViewerService } from 'src/app/services/image-viewer.service';
 
 @Component({
@@ -8,12 +7,10 @@ import { ImageViewerService } from 'src/app/services/image-viewer.service';
   styleUrls: ["./image-viewer.component.less"]
 })
 export class ImageViewerComponent implements OnInit {
-  fakeImages = fakeImages; 
-  selectedImg: string = ''
+  selectedImg: any = '';
   constructor(public imgService: ImageViewerService) {}
 
-  ngOnInit() {
-    this.imgService.setImagesUrl(fakeImages);    
+  ngOnInit() {     
     this.selectedImg = this.imgService.getSelectedUrl();
   }
 
