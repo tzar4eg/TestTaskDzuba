@@ -1,2 +1,5 @@
-<app-selected-image [image]='selectedImage'></app-selected-image>
-<app-image-list [images]='fakeImages'></app-image-list>
+<app-selected-image [image]="selectedImage"
+(forward)="getNextImage()"
+(backward)="getPreviousImage()"
+></app-selected-image>
+<app-image-list [images]="fakeImages"></app-image-list>
