@@ -53,7 +53,7 @@ export class ImageViewerService {
   }
 
   loadImages(images: string[]) {
-    let baseString = "http://159.65.173.251:5001/";
+    let baseString = "http://157.245.213.158:5001/";
     let images$ = images.map(el => {
       return this._http.get(baseString + "uploads/" + el, {
         responseType: "blob"
