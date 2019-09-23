@@ -47,7 +47,7 @@ export class DropzoneComponent implements OnInit {
 
   uploadFile(file: File): Observable<any> {
     let formData = new FormData();
-    let url = "http://localhost:4100/upload";
+    let url = "http://159.65.173.251:5001/upload";
     formData.append("image", file, file.name);
     return this._http.post(url, formData, {
       reportProgress: true,
