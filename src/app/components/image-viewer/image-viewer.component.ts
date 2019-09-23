@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from "@angular/core";
-import { ImageViewerService } from 'src/app/services/image-viewer.service';
+import { ImageViewerService } from "src/app/services/image-viewer.service";
 
 @Component({
   selector: "app-image-viewer",
@@ -7,10 +7,10 @@ import { ImageViewerService } from 'src/app/services/image-viewer.service';
   styleUrls: ["./image-viewer.component.less"]
 })
 export class ImageViewerComponent implements OnInit {
-  selectedImg: any = '';
+  selectedImg: any = "";
   constructor(public imgService: ImageViewerService) {}
 
-  ngOnInit() {     
+  ngOnInit() {
     this.selectedImg = this.imgService.getSelectedUrl();
   }
 
@@ -26,11 +26,17 @@ export class ImageViewerComponent implements OnInit {
     this.imgService.nextImage();
   }
 
-  @HostListener("document:keyup", ["$event"])
+  @HostListener("window:keydown", ["$event"])
   onKeyUp(event: KeyboardEvent): void {
-    let keyFilter: string[] = ["ArrowLeft", "ArrowRight"];
-    if (keyFilter.indexOf(event.code) < 0) return;
+
+    let keyFilter: string[] = ["ArrowLeft", "ArrowRight", "Right", "Left"];
+    if (keyFilter.indexOf(event.key) < 0) {
+      return;
+    }
     event.preventDefault();
-    event.code === "ArrowLeft" ? this.getPreviousImage() : this.getNextImage();
+    event.key === "ArrowLeft" || event.key === "Left"
+      ? this.getPreviousImage()
+      : this.getNextImage();
   }
 }
+
